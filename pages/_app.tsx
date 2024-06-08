@@ -37,7 +37,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link rel="icon" type="image/png" href="/favicon.png" />
       </Head>
-      <ColorModeScript />
+      {/* <ColorModeScript /> */}
       <GlobalStyle />
 
       <Providers>
