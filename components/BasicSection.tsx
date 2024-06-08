@@ -10,18 +10,23 @@ export interface BasicSectionProps {
   imageUrl: string;
   title: string;
   overTitle: string;
+  titleLink?: string;
   reversed?: boolean;
 }
 
-export default function BasicSection({ imageUrl, title, overTitle, reversed, children }: PropsWithChildren<BasicSectionProps>) {
+export default function BasicSection({ imageUrl, title, overTitle, reversed, children, titleLink }: PropsWithChildren<BasicSectionProps>) {
   return (
     <BasicSectionWrapper reversed={reversed}>
       <ImageContainer>
-        <NextImage src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <NextImage src={imageUrl} alt={title} layout="fill" objectFit="contain" />
       </ImageContainer>
       <ContentContainer>
         <CustomOverTitle>{overTitle}</CustomOverTitle>
-        <Title>{title}</Title>
+        <Title>
+          <TitleLink href={titleLink} target="_blank" rel="noopener noreferrer">
+            {title}
+          </TitleLink>
+        </Title>
         <RichText>{children}</RichText>
       </ContentContainer>
     </BasicSectionWrapper>
@@ -34,6 +39,28 @@ const Title = styled.h1`
   line-height: 1.1;
   margin-bottom: 4rem;
   letter-spacing: -0.03em;
+
+  ${media('<=tablet')} {
+    font-size: 4.6rem;
+    margin-bottom: 2rem;
+  }
+`;
+
+const TitleLink = styled.a`
+  font-size: 5.2rem;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+  letter-spacing: -0.03em;
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s;
+
+  &:hover {
+    text-decoration: underline;
+    color: #f45832;
+    cursor: pointer;
+  }
 
   ${media('<=tablet')} {
     font-size: 4.6rem;
@@ -77,6 +104,7 @@ type Props = Pick<BasicSectionProps, 'reversed'>;
 const BasicSectionWrapper = styled(Container)`
   display: flex;
   align-items: center;
+
   flex-direction: ${(p: Props) => (p.reversed ? 'row-reverse' : 'row')};
 
   ${ImageContainer} {

@@ -1,8 +1,10 @@
 import NextLink from 'next/link';
-import { FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
+import { EmailIcon, FacebookIcon, LinkedinIcon, TwitterIcon } from 'react-share';
 import styled from 'styled-components';
 import Container from 'components/Container';
 import { media } from 'utils/media';
+import Logo from './Logo';
+import Image from 'next/image';
 
 type SingleFooterListItem = { title: string; href: string };
 type FooterListItems = SingleFooterListItem[];
@@ -50,33 +52,20 @@ export default function Footer() {
   return (
     <FooterWrapper>
       <Container>
-        <ListContainer>
-          {footerItems.map((singleItem) => (
-            <FooterList key={singleItem.title} {...singleItem} />
-          ))}
-        </ListContainer>
-        <BottomBar>
-          <ShareBar>
-            <NextLink href="https://www.twitter.com/my-saas-startup" passHref>
-              <a>
-                <TwitterIcon size={50} round={true} />
-              </a>
-            </NextLink>
-
-            <NextLink href="https://www.facebook.com/my-saas-startup" passHref>
-              <a>
-                <FacebookIcon size={50} round={true} />
-              </a>
-            </NextLink>
-
-            <NextLink href="https://www.linkedin.com/my-saas-startup" passHref>
-              <a>
-                <LinkedinIcon size={50} round={true} />
-              </a>
-            </NextLink>
-          </ShareBar>
-          <Copyright>&copy; Copyright 2021 My Saas Startup</Copyright>
-        </BottomBar>
+        <div className="w-full h-full flex-col justify-center items-center">
+          <div className="flex justify-center items-center gap-4 mb-6">
+            <Image className="rounded-md" src="/0.png" alt="Logo" width={60} height={60} />
+            <p className="font-bold text-4xl">ANFANG</p>
+          </div>
+          <BottomBar>
+            <div className="flex-col h-full w-full items-center justify-center space-y-2 mt-3">
+              <p className="text-xl text-center w-full text-slate-400 mb-6">
+               anfangvn@gmail.com | Số 109 đường Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội | 0888881356
+              </p>
+              <p className="text-xl text-center w-full">&copy; 2024 ANFANG.GROUP</p>
+            </div>
+          </BottomBar>
+        </div>
       </Container>
     </FooterWrapper>
   );
@@ -162,6 +151,7 @@ const ShareBar = styled.div`
 const Copyright = styled.p`
   font-size: 1.5rem;
   margin-top: 0.5rem;
+  text-align: center;
 `;
 
 const BottomBar = styled.div`

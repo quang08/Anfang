@@ -3,10 +3,10 @@ import styled from 'styled-components';
 import Button from 'components/Button';
 import ButtonGroup from 'components/ButtonGroup';
 import Container from 'components/Container';
-import HeroIllustration from 'components/HeroIllustation';
 import OverTitle from 'components/OverTitle';
 import { useNewsletterModalContext } from 'contexts/newsletter-modal.context';
 import { media } from 'utils/media';
+import Image from 'next/image';
 
 export default function Hero() {
   const { setIsModalOpened } = useNewsletterModalContext();
@@ -14,25 +14,28 @@ export default function Hero() {
   return (
     <HeroWrapper>
       <Contents>
-        <CustomOverTitle>the coolest, saas product you have ever seen</CustomOverTitle>
-        <Heading>Make your life easier with our SaaS</Heading>
+        <Heading>Customize fine creativity</Heading>
         <Description>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, tempora qui. Explicabo voluptate iure ipsum molestias
-          repudiandae perspiciatis nostrum praesentium, unde pariatur tempora magni rem. Necessitatibus facilis obcaecati ratione.
+          Xin chào, ANFANG GROUP là một hệ sinh thái gồm các công ty thương mại và dự án xã hội. Chúng tôi gồm : Human of Hanoi (Dự án cộng
+          đồng lưu giữ văn hóa Hà Nội) Humanoi (Creative House/Công ty sáng tạo) Lucy Bui Diamond & Jewelry (Kinh doanh thiết kế trang sức
+          vàng và kim cương) Họa kể (Dự án nghệ thuật lưu giữ dữ liệu nghệ sĩ).
         </Description>
         <CustomButtonGroup>
-          <Button onClick={() => setIsModalOpened(true)}>
-            Subscribe to the newsletter <span>&rarr;</span>
-          </Button>
-          <NextLink href="#whitepaper" passHref>
+          <NextLink href="/contact">
+            <Button>
+              Contact Us <span>&rarr;</span>
+            </Button>
+          </NextLink>
+          <NextLink href="#our-works" passHref>
             <Button transparent>
-              Features <span>&rarr;</span>
+              OUR Works <span>&rarr;</span>
             </Button>
           </NextLink>
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
-        <HeroIllustration />
+        {/* <HeroIllustration /> */}
+        <Image src="/0.png" height={440} width={400} />
       </ImageContainer>
     </HeroWrapper>
   );
