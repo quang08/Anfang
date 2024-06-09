@@ -51,22 +51,20 @@ const footerItems: FooterItems = [
 export default function Footer() {
   return (
     <FooterWrapper>
-      <Container>
-        <div className="w-full h-full flex-col justify-center items-center">
-          <div className="flex justify-center items-center gap-4 mb-6">
-            <Image className="rounded-md" src="/0.png" alt="Logo" width={60} height={60} />
-            <p className="font-bold text-4xl">ANFANG</p>
-          </div>
-          <BottomBar>
-            <div className="flex-col h-full w-full items-center justify-center space-y-2 mt-3">
-              <p className="text-xl text-center w-full text-slate-400 mb-6">
-               anfangvn@gmail.com | Số 109 đường Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội | 0888881356
-              </p>
-              <p className="text-xl text-center w-full">&copy; 2024 ANFANG.GROUP</p>
-            </div>
-          </BottomBar>
+      <div className="w-full h-full flex-col justify-center items-center">
+        <div className="flex justify-center items-center gap-4 mb-2">
+          <Image className="rounded-md" src="/0.png" alt="Logo" width={60} height={60} />
+          <p className="font-bold text-4xl">ANFANG</p>
         </div>
-      </Container>
+        <BottomBar>
+          <div className="flex-col h-full w-full items-center justify-center space-y-2">
+            <p className="text-xl text-center w-full text-slate-400 mb-6">
+              MST: 0110648097 | Email: anfangvn@gmail.com | Địa chỉ: Số 109 đường Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội.
+            </p>
+            <p className="text-xl text-center w-full">&copy; 2024 ANFANG.GROUP</p>
+          </div>
+        </BottomBar>
+      </div>
     </FooterWrapper>
   );
 }
@@ -93,7 +91,7 @@ function ListItem({ title, href }: SingleFooterListItem) {
 }
 
 const FooterWrapper = styled.div`
-  padding-top: 10rem;
+  padding-top: 5rem;
   padding-bottom: 4rem;
   background: rgb(var(--secondary));
   color: rgb(var(--textSecondary));
@@ -155,7 +153,7 @@ const Copyright = styled.p`
 `;
 
 const BottomBar = styled.div`
-  margin-top: 6rem;
+  margin-top: 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;

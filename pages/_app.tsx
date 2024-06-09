@@ -22,8 +22,8 @@ import { NewsletterModalContextProvider, useNewsletterModalContext } from 'conte
 import { NavItems } from 'types';
 
 const navItems: NavItems = [
-  { title: 'About Us', href: '/about-us' },
-  { title: 'Our Works', href: '/#our-works' },
+  // { title: 'About Us', href: '/about-us' },
+  // { title: 'Our Works', href: '/#our-works' },
   { title: 'Contact', href: '/contact' },
 ];
 
@@ -35,7 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link rel="icon" type="image/png" href="/favicon.png" />
+        <link rel="icon" type="image/png" href="/0.png" />
       </Head>
       {/* <ColorModeScript /> */}
       <GlobalStyle />

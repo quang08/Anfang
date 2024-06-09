@@ -15,6 +15,9 @@ export default function Hero() {
     <HeroWrapper>
       <Contents>
         <Heading>Customize fine creativity</Heading>
+        <MobileImageContainer>
+          <Image src="/0.png" height={440} width={400} className='w-full flex items-center justify-center'/>
+        </MobileImageContainer>
         <Description>
           Xin chào, ANFANG GROUP là một hệ sinh thái gồm các công ty thương mại và dự án xã hội. Chúng tôi gồm : Human of Hanoi (Dự án cộng
           đồng lưu giữ văn hóa Hà Nội) Humanoi (Creative House/Công ty sáng tạo) Lucy Bui Diamond & Jewelry (Kinh doanh thiết kế trang sức
@@ -26,11 +29,11 @@ export default function Hero() {
               Contact Us <span>&rarr;</span>
             </Button>
           </NextLink>
-          <NextLink href="#our-works" passHref>
+          {/* <NextLink href="#our-works" passHref>
             <Button transparent>
               OUR Works <span>&rarr;</span>
             </Button>
-          </NextLink>
+          </NextLink> */}
         </CustomButtonGroup>
       </Contents>
       <ImageContainer>
@@ -40,6 +43,17 @@ export default function Hero() {
     </HeroWrapper>
   );
 }
+
+const MobileImageContainer = styled.div`
+  display: none;
+
+  ${media('<=desktop')} {
+    display: block;
+    margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+`;
 
 const HeroWrapper = styled(Container)`
   display: flex;
@@ -77,6 +91,7 @@ const ImageContainer = styled.div`
 
   ${media('<=desktop')} {
     margin-top: 2rem;
+    display: none;
     justify-content: center;
     svg {
       max-width: 80%;
