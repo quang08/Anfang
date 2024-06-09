@@ -1,3 +1,4 @@
+import Link from 'components/Link';
 import { FacebookIcon } from 'react-share';
 import styled from 'styled-components';
 import { media } from 'utils/media';
@@ -18,7 +19,9 @@ export default function InformationSection() {
 
       <div>
         <h4 className="font-bold mt-2">Kết nối với chúng tôi</h4>
-        <FacebookIcon size={40} round={true} iconFillColor="black" bgStyle={{ fill: '#FFFFFF' }} />
+        <Link href="https://www.facebook.com/anfanggroup">
+          <FacebookIcon size={40} round={true} iconFillColor="black" bgStyle={{ fill: '#FFFFFF' }} />
+        </Link>
       </div>
     </Wrapper>
   );
@@ -49,6 +52,6 @@ const Wrapper = styled.div`
   span {
     opacity: 1;
     color: rgba(var(--text), 1);
-  }  
+  }
 `;
 //MST: 0110648097 | Email: anfangvn@gmail.com | Địa chỉ: Số 109 đường Nguyễn Trãi, Phường Thượng Đình, Quận Thanh Xuân, Hà Nội.
