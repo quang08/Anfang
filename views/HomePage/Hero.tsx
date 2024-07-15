@@ -16,12 +16,12 @@ export default function Hero() {
       <Contents>
         <Heading>Customize fine creativity</Heading>
         <MobileImageContainer>
-          <Image src="/0.png" height={440} width={400} className='w-full flex items-center justify-center'/>
+          <Image src="/0.png" height={440} width={400} className="w-full flex items-center justify-center" />
         </MobileImageContainer>
         <Description>
-          Xin chào, ANFANG GROUP là một hệ sinh thái gồm các công ty thương mại và dự án xã hội. Chúng tôi gồm : Human of Hanoi (Dự án cộng
-          đồng lưu giữ văn hóa Hà Nội) Humanoi (Creative House/Công ty sáng tạo) Lucy Bui Diamond & Jewelry (Kinh doanh thiết kế trang sức
-          vàng và kim cương) Họa kể (Dự án nghệ thuật lưu giữ dữ liệu nghệ sĩ).
+          Xin chào, Công ty TNHH ANFANG (ANFANG GROUP) là một hệ sinh thái gồm các công ty thương mại và dự án xã hội. Chúng tôi gồm : Human
+          of Hanoi (Dự án cộng đồng lưu giữ văn hóa Hà Nội) Humanoi (Creative House/Công ty sáng tạo) Lucy Bui Diamond & Jewelry (Kinh doanh
+          thiết kế trang sức vàng và kim cương) Họa kể (Dự án nghệ thuật lưu giữ dữ liệu nghệ sĩ).
         </Description>
         <CustomButtonGroup>
           <NextLink href="/contact">
